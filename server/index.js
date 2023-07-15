@@ -4,10 +4,11 @@ import fetch from 'node-fetch';
 const app = express();
 
 app.get('/', async (req, res) => {
+    res.send("hiii from the server...")
     try {
         const data = await fetch('http://localhost:3030/tasks');
         const tasks = await data.json();
-        res.send(tasks);
+        console.log(tasks);
     } catch (error) {
         console.log(error);
     }

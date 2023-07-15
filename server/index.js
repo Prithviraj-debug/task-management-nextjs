@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 const app = express();
 
 app.get('/', async (req, res) => {
-    const data = await fetch('http://localhost:3001/tasks');
+    const data = await fetch('http://localhost:3030/tasks');
     const tasks = await data.json();
     res.send(tasks);
 })
